@@ -8,7 +8,7 @@ var admin = require("firebase-admin");
 
 // firebase admin 
 
-var serviceAccount = require('./ema-john-simple-360b4-firebase-adminsdk-hbotk-5b33eb0668.json');
+var serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount)
